@@ -1,2 +1,3 @@
 # harry-potter
-some fan harry potter projects to deepen my coding skills
+A selling web page for Harry Potter books.
+Made to deepen my coding skills. Doesn't have any real commercial meaning.
