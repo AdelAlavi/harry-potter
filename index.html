@@ -1,30 +1,197 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
     <title>Document</title>
 </head>
 <style>
     section {
         padding: 61px 0;
     }
+
+    @font-face {
+        font-family: HarryPotter;
+        src: url(assets/HarryPotter.ttf);
+    }
+
+    #books-group-flush a {
+        text-decoration: none;
+    }
+
+    .list-group-item-action:hover {
+        background-color: lightgray !important;
+    }
+
+    @media screen and (max-width: 600px) {
+        #buy-collection, #buy-indiviual-books {
+            border: none;
+        }
+    }
 </style>
+
 <body>
-    <section id="main" class="container-lg">
+    <!--nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-xl">
+            <a href="#" class="navbar-brand" style="font-family: HarryPotter, sans-serif;">Harry Potter</a>
+            <!-- Toggle for mobile screens -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-collapsable"
+             aria-controls="nav-collapsable" aria-expanded="false" aria-label="Navigation toggle">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+             <!-- navbar items -->
+              <div class="collapse navbar-collapse justify-content-end align-center" id="nav-collapsable">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">link1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">link2</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link" href="#">link3</a>
+                    </li>
+                    <li class="nav-item d-none d-md-inline">
+                        <a href="#" class="btn btn-primary ms-2">link 3</a>
+                    </li>
+                  </ul>
+              </div>
+
+        </div>
+    </nav>
+
+    <!-- main, image of the books and some text-->
+    <section id="main" class="container-lg my-md-4">
         <div class="row justify-content-center align-items-center">
             <div id="main-tx" class="col-md-5 my-2 text-center text-md-start">
                 <div class="display-4">Harry Potter books</div>
-                <div class="display-6 text-muted mb-5">An adventures ride to cultivate empathy, creativity and patience <br>Get lost in the world of Harry Potter, the boy who lived.</div>
+                <div class="display-6 text-muted mb-5">An adventures ride to cultivate empathy, creativity and patience.<br>Get lost in the world of Harry Potter, the boy who lived.</div>
                 <a href="#buy" class="btn btn-primary btn-lg">Get the adventure</a>
                 <a href="#learn-more" class="btn btn-secondary btn-lg">Learn more</a>
             </div>
-            <div id="main-img" class="col-md-7 text-center">
+            <div id="main-img" class="col-md-7 text-center d-none d-md-block">
                 <img class="img-fluid" src="assets/book-collection.jpg" alt="Collection of Harry Potter books">
             </div>
         </div>
     </section>
 
+    <section id="comments" class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-md-5 ">
+                <h3 class="text-center">People's comments on <span style="font-family: HarryPotter;">Harry Potter</span></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex">
+                            <h5 class="me-3">HP fans revisit</h5>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="lead">Product was exactly what I expected. I'm thrilled to be able to revisit the books that my sons and I read when they first came out. This set was inexpensive and still provides all of the joy!</p>
+                        <small>By Lee</small>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex">
+                            <h5 class="me-3">Great Set</h5>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="lead">My son requested these books. He was so happy to receive them. They came in a nice box to help keep them organized and safe.</p>
+                        <small>By Cassandra</small>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex">
+                            <h5 class="me-3"> Perfect!!!</h5>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="lead">I bought these for my nephew and he loved it. It came perfectly wrapped in a display box. There were no dents or scratches. He loved it!</p>
+                        <small>By Michelle M</small>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+     </section>
+
+
+    <!-- Purchase options -->
+     <section id="purchase-options" class="container-md mb-md-4">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="card col-md-5 me-md-5 mb-3 mb-md-0 border-primary" id="buy-collection">
+                <div>
+                    <img class="img-fluid rounded-start" src="assets/book-collection-compact.jpg" alt="Collection of Harry Potter books">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">The entire collection</h4>
+                    <p class="card-text lead">Get all 7 works of J.K. Rowling at once. Read as you please.</p>
+                    <div class="d-flex aling-items-center">
+                        <a class="btn btn-primary btn-lg me-4" href="https://www.bloomsbury.com/uk/harry-potter-box-set-the-complete-collection-childrens-paperback-9781408856772/">Get now</a>
+                        <p class="card-text lead text-success fw-bold mt-2">£63</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card col-md-4 ms-md-5" id="buy-indiviual-books">
+                <div class="card-header fw-bold">
+                    Get books individually
+                </div>
+                <ul class="list-group list-group-flush" id="books-group-flush">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center ">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-philosophers-stone-9781408855652/">Harry Potter and the Philosopher's Stone</a>
+                        <span class="text-success">£8.09</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-chamber-of-secrets-9781408855669/">Harry Potter and the Chamber of Secrets</a>
+                        <span class="text-success">£8.09</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-prisoner-of-azkaban-9781408855676/">Harry Potter and the Prisoner of Azkaban</a>
+                        <span class="text-success">£8.09</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-goblet-of-fire-9781408855683/">Harry Potter and the Goblet of Fire</a>
+                        <span class="text-success">£8.99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-order-of-the-phoenix-9781408855690/">Harry Potter and the Order of the Phoenix</a>
+                        <span class="text-success">£8.99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-halfblood-prince-9781408855706/">Harry Potter and the Half-Blood Prince</a>
+                        <span class="text-success">£8.99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                        <a class="text-secondary" href="https://www.bloomsbury.com/uk/harry-potter-and-the-deathly-hallows-9781408855713/">Harry Potter and the Deathly Hallows</a>
+                        <span class="text-success">£8.99</span>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+ 
+     </section>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
